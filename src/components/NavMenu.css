@@ -1,0 +1,19 @@
+﻿a.navbar-brand {
+	white-space: normal;
+	text-align: center;
+	word-break: break-all;
+}
+
+.selected-link {
+	text-decoration: underline;
+	font-weight: 550;
+}
+
+html {
+	font-size: 14px;
+}
+@media (min-width: 768px) {
+	html {
+		font-size: 16px;
+	}
+}

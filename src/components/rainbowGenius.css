@@ -1,0 +1,39 @@
+.parent {
+	position: fixed;
+	top: 60%;
+	left: 50%;
+	background-color: #fff;
+}
+
+.center {
+	width: 240px;
+	height: 240px;
+	border-radius: 180px;
+	margin: auto;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #000;
+	text-align: center;
+	line-height: 240px;
+	cursor: pointer;
+}
+
+.outer {
+	position: absolute;
+	width: 120px;
+	height: 120px;
+	border-radius: 140px;
+	background-color: #000;
+	cursor: pointer;
+}
+
+
+.inside-text {
+	text-shadow:
+		2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+	font-size: 48px;
+	padding: 6px;
+	border-radius: 15px;
+};
