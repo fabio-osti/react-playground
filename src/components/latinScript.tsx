@@ -13,7 +13,7 @@ export default class LatinScript extends Component<IProps, IState> {
 		this.state = { translation: "" };
 	}
 
-	translate = (e: any) => {
+	translate = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
 		this.setState({
 			translation: e.target.value
 				.toUpperCase()

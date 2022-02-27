@@ -16,21 +16,21 @@ export default class NavMenu extends Component<IProps, IState> {
 
 	constructor(props: any) {
 		super(props);
-		this.toggleNavbar = this.toggleNavbar.bind(this);
 		this.state = {
 			collapsed: true,
 			widgetDropdownOpen: false,
 		};
 	}
 
-	toggleNavbar() {
+	toggleNavbar = () => {
 		this.setState({
 			collapsed: !this.state.collapsed,
 		});
 	}
 
+	static readonly classNameSetter = (link: {isActive: boolean}) => `nav-link ${link.isActive? "selected-link":""}`
+
 	render() {
-		const classNameSetter = (link: {isActive: boolean}) => `nav-link ${link.isActive? "selected-link":""}`
 		return (
 			<header>
 				<Navbar className="navbar-expand-sm navbar-toggleable-sm ng-white border-bottom box-shadow mb-3" light>
@@ -41,22 +41,22 @@ export default class NavMenu extends Component<IProps, IState> {
 					<Collapse isOpen={this.state.collapsed}>
 						<Nav className="flex-grow" navbar>
 							<NavItem>
-								<NavLink className={classNameSetter} to="/digital-dice">
+								<NavLink className={NavMenu.classNameSetter} to="/digital-dice">
 									Digital Dice
 								</NavLink>
 							</NavItem>
 							<NavItem>
-								<NavLink className={classNameSetter} to="/latin-transcript">
+								<NavLink className={NavMenu.classNameSetter} to="/latin-transcript">
 									Latin Transcriptor
 								</NavLink>
 							</NavItem>
 							<NavItem>
-								<NavLink className={classNameSetter} to="/fleeing-square">
+								<NavLink className={NavMenu.classNameSetter} to="/fleeing-square">
 									Fleeing Square
 								</NavLink>
 							</NavItem>
 							<NavItem>
-								<NavLink className={classNameSetter} to="/rainbow-genius">
+								<NavLink className={NavMenu.classNameSetter} to="/rainbow-genius">
 									Rainbow Genius
 								</NavLink>
 							</NavItem>
